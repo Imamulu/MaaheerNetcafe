@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaheer Netcafe | Online Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-style: italic;
+            color: #bdc3c7;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid var(--accent-color);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MAAHEER NETCAFE</h1>
+    <p>"Me Sevale Maa Lakshyam – Online Services at Your Fingertips"</p>
+</header>
+
+<div class="container">
+    <div class="services-grid">
+        
+        <a href="https://uidai.gov.in/" target="_blank" class="card">
+            <i class="fas fa-id-card"></i>
+            <h3>Aadhaar Services</h3>
+            <p>Download, Update, and Link Mobile Number.</p>
+        </a>
+
+        <a href="https://voters.eci.gov.in/" target="_blank" class="card">
+            <i class="fas fa-user-check"></i>
+            <h3>Voter ID</h3>
+            <p>New Registration and Epic Download.</p>
+        </a>
+
+        <a href="https://www.passportindia.gov.in/" target="_blank" class="card">
+            <i class="fas fa-passport"></i>
+            <h3>Passport Seva</h3>
+            <p>Apply for Fresh Passport and Renewals.</p>
+        </a>
+
+        <a href="https://udyamregistration.gov.in/" target="_blank" class="card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Udyam Registration</h3>
+            <p>MSME and Small Business Certificates.</p>
+        </a>
+
+        <a href="https://onlineap.meeseva.gov.in/" target="_blank" class="card">
+            <i class="fas fa-file-invoice"></i>
+            <h3>Meeseva</h3>
+            <p>Caste, Income, and Residence Certificates.</p>
+        </a>
+
+        <a href="https://vahan.parivahan.gov.in/" target="_blank" class="card">
+            <i class="fas fa-car"></i>
+            <h3>Vaahan Seva</h3>
+            <p>RC Status, DL, and Vehicle Tax Services.</p>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Maaheer Netcafe. All Rights Reserved.</p>
+    <p>Contact: +91 XXXXXXXXXX | Location: Mee Area, City</p>
+</footer>
+
+</body>
+</html>
+

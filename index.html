@@ -3,121 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maaheer Netcafe | Online Services Hub</title>
+    <title>Maaheer Netcafe | Government Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
         :root {
-            /* Kotha Blue and Green Theme Colors */
-            --primary-blue: #003366; /* Header, Footer, H3 */
-            --accent-green: #27ae60; /* Icons and Action lines */
-            --bg-light: #ecf0f1; /* Page Background */
-            --card-hover: #ffffff; /* Card Background on hover */
+            --primary-bg: #0a192f; /* Dark Blue */
+            --card-bg: #ffffff;
+            --accent-color: #00d2ff; /* Sky Blue */
+            --text-dark: #112240;
+            --button-color: #3a7bd5;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-light);
-            color: #333;
+            background-color: #f0f2f5;
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
+        /* Header Style */
         header {
-            background-color: var(--primary-blue);
+            background: linear-gradient(135deg, #003366 0%, #00d2ff 100%);
             color: white;
-            padding: 2.5rem 1rem;
+            padding: 50px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            font-weight: bold;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         header p {
-            font-style: italic;
-            color: #bdc3c7;
-            margin-top: 10px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
         }
 
+        /* Grid Layout */
         .container {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 0 1rem;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .services-grid {
             display: grid;
-            /* **MAIN CHANGE**: Creating exactly 3 columns (for 2 rows of 3) */
+            /* Pakka pakkana 3 columns (2 rows setup) */
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 25px;
         }
 
         .card {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 12px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Border style changed to accent green */
-            border-bottom: 5px solid var(--accent-green);
             text-decoration: none;
-            color: inherit;
+            color: var(--text-dark);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 180px; /* Fixed height for consistency */
+            border: 1px solid #eee;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-            background-color: var(--card-hover);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--button-color);
         }
 
         .card i {
-            font-size: 2.8rem;
-            color: var(--accent-green); /* Green Icons */
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
         }
 
         .card h3 {
-            margin: 5px 0 10px 0;
-            color: var(--primary-blue); /* Blue Titles */
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #003366;
         }
 
         .card p {
-            font-size: 0.95rem;
-            color: #555;
-            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
         }
 
+        /* Footer */
         footer {
-            background: var(--primary-blue);
+            background: #0a192f;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 40px 20px;
+            margin-top: 60px;
         }
 
-        /* Essential for Mobile: Switches back to 1 column on small screens */
-        @media (max-width: 768px) {
+        footer .contact-num {
+            font-size: 1.5rem;
+            color: #00d2ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 15px 0;
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 992px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
+        /* Responsive - Mobile */
+        @media (max-width: 600px) {
             header h1 { font-size: 2rem; }
             .services-grid {
                 grid-template-columns: 1fr;
             }
+            .card { padding: 20px; }
         }
     </style>
 </head>
@@ -125,55 +144,55 @@
 
 <header>
     <h1>MAAHEER NETCAFE</h1>
-    <p>"Me Sevale Maa Lakshyam – Online Services at Your Fingertips"</p>
+    <p>"Me Sevale Maa Lakshyam – Fast & Secure Online Services"</p>
 </header>
 
 <div class="container">
     <div class="services-grid">
         
         <a href="https://uidai.gov.in/" target="_blank" class="card">
-            <i class="fas fa-id-card"></i>
-            <h3>Aadhaar Services</h3>
-            <p>Download, Update, and Link</p>
+            <i class="fa-solid fa-fingerprint"></i>
+            <h3>Aadhaar</h3>
+            <p>Download, Update, Mobile Link</p>
         </a>
 
         <a href="https://voters.eci.gov.in/" target="_blank" class="card">
-            <i class="fas fa-user-check"></i>
+            <i class="fa-solid fa-check-to-slot"></i>
             <h3>Voter ID</h3>
-            <p>New Registration & Epic Download</p>
+            <p>New ID & Correction Services</p>
         </a>
 
         <a href="https://www.passportindia.gov.in/" target="_blank" class="card">
-            <i class="fas fa-passport"></i>
-            <h3>Passport Seva</h3>
-            <p>Fresh Passport and Renewals</p>
+            <i class="fa-solid fa-passport"></i>
+            <h3>Passport</h3>
+            <p>Fresh & Re-issue Applications</p>
         </a>
 
         <a href="https://udyamregistration.gov.in/" target="_blank" class="card">
-            <i class="fas fa-briefcase"></i>
-            <h3>Udyam Registration</h3>
-            <p>MSME / Small Business Certificates</p>
+            <i class="fa-solid fa-building"></i>
+            <h3>Udyam</h3>
+            <p>MSME Business Registration</p>
         </a>
 
         <a href="https://onlineap.meeseva.gov.in/" target="_blank" class="card">
-            <i class="fas fa-file-invoice"></i>
+            <i class="fa-solid fa-file-signature"></i>
             <h3>Meeseva</h3>
-            <p>Caste, Income, & Residence</p>
+            <p>Caste, Income & Certificates</p>
         </a>
 
         <a href="https://vahan.parivahan.gov.in/" target="_blank" class="card">
-            <i class="fas fa-car"></i>
+            <i class="fa-solid fa-car-side"></i>
             <h3>Vaahan Seva</h3>
-            <p>RC Status and Driving License</p>
+            <p>RC, DL & Vehicle Tax Details</p>
         </a>
 
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2024 Maaheer Netcafe. All Rights Reserved.</p>
-    <p>Contact: <a href="tel:8978323221" style="color:white; text-decoration:none;">8978323221</a></p>
-    <p style="font-size: 0.9rem; color: #bdc3c7;">[Mee Area, Proddatur]</p>
+    <p>Any Queries? Call us at:</p>
+    <a href="tel:8978323221" class="contact-num"><i class="fa-solid fa-phone"></i> 8978323221</a>
+    <p>&copy; 2024 Maaheer Netcafe | Your Digital Partner</p>
 </footer>
 
 </body>
